@@ -4,17 +4,17 @@
 
 先知上有师傅发了相关的分析文章：https://xz.aliyun.com/t/5513
 
-大意是axis1的AdminService可通过soap请求添加相应类的Service,然后可执行类中的方法，但是这个类得满足一定的条件，而freemarker组件中的某个类满足这个条件且可传入参数造成命令执行
+大意是axis1的AdminService可通过soap请求添加相应类的Service，然后可执行类中的方法，但是这个类得满足一定的条件，而freemarker组件中的某个类满足这个条件且可传入参数造成命令执行
 
 详细分析见先知原文
 
-但是关键poc部分打码了，于是尝试本地复现
+但是关键部分打码了，于是尝试本地复现
 
 ## 漏洞复现
 
 1、环境搭建
 
-jdk1.8+tomcat8.5+axis1.4+freemarker-2.3.28
+win10+jdk1.8+tomcat8.5+axis1.4+freemarker-2.3.28
 
 下载地址：
 
@@ -28,7 +28,7 @@ https://freemarker.apache.org/freemarkerdownload.html
 
 ![](pic/freemarker.png)
 
-启动tomcat后访问http://localhost:8080/axis，我本地是8081端口
+启动tomcat后访问`http://localhost:8080/axis`，我本地是8081端口
 
 ![](pic/axis.png)
 
